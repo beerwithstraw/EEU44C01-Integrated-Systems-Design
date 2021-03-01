@@ -1,0 +1,100 @@
+Check-1: Exiting when 0 Cars are present
+
+5-State Parking
+Check No.           1 ---- 
+PASSED
+
+Observed Count:  0
+ Expected Count:  0
+
+
+Check-2: Count from 0 -> 5 car entries using 5-STATE-PARKING
+
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+Check No.           2 ---- 
+PASSED
+
+Observed Count: 15
+ Expected Count: 15
+
+
+Check-3: Count from 6 -> 15 car entries using 6-STATE-PARKING
+
+Check No.           3 ---- 
+PASSED
+
+Observed Count: 15
+ Expected Count: 15
+
+
+Check-4: Count for more than 15 car entries
+
+5-State Parking
+Check No.           4 ---- 
+FAILED
+
+Observed Count: 14
+ Expected Count: 15
+
+
+6-State-Parking
+Check No.           5 ---- 
+PASSED
+
+Observed Count: 15
+ Expected Count: 15
+
+
+Check-5: Count from 15 -> 10 car exits using 6-STATE-PARKING
+
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+Check No.           6 ---- 
+FAILED
+
+Observed Count: 15
+ Expected Count:  0
+
+
+Check-6: Count from 10 -> 5 car exits using 5-STATE-PARKING
+
+Check No.           7 ---- 
+FAILED
+
+Observed Count: 15
+ Expected Count:  0
+
+
+Total Checks conducted:           7
+
+Total Checks passed:           4
+
+Total Checks failed:           3
+
