@@ -20,33 +20,37 @@ module Stim_Generator #(parameter T=2, D=4)(
         $fdisplay(logs, "Check-1: Exiting when 0 Cars are present\n");
         five_state_parking(5'b01100, 5'b00110); 
         count_check_func(); 
+        six_state_parking(6'b011100, 6'b001110);
+        count_check_func(); 
         
-        $fdisplay(logs, "Check-2: Count from 0 -> 5 car entries using 5-STATE-PARKING\n");
-        while (exp_count < 4'b1111) begin
-            five_state_parking(5'b00110, 5'b01100);
-        end
-        count_check_func();  
-        
-        $fdisplay(logs, "Check-3: Count from 6 -> 15 car entries using 6-STATE-PARKING\n");
-        while (exp_count < 4'b1111) begin
-            six_state_parking(6'b000110, 6'b011100);
+        $fdisplay(logs, "Check-2: Count from 0 -> 5 car entries using 6-STATE-PARKING\n");
+        while (exp_count < 4'b0101) begin
+            six_state_parking(6'b001110, 6'b011100);
         end
         count_check_func();       
-   
-        $fdisplay(logs, "Check-4: Count for more than 15 car entries\n");
+        
+        $fdisplay(logs, "Check-3: Count from 5 -> 15 car entries using 5-STATE-PARKING\n");
+        while (exp_count < 4'b1111) begin
+            five_state_parking(5'b00110, 5'b01100);
+        end
+        count_check_func();    
+        
+        $fdisplay(logs, "Check-4: Count for more than 15 car entries 5-State-Parking\n");
             five_state_parking(5'b00110, 5'b01100);
         count_check_func(); 
-            six_state_parking(5'b00110, 5'b01100);
-        count_check_func();     
+     
+        $fdisplay(logs, "Check-5: Count for more than 15 car entries 6-State-Parking\n");
+            six_state_parking(6'b001110, 6'b011100);
+        count_check_func(); 
 
-        $fdisplay(logs, "Check-5: Count from 15 -> 10 car exits using 6-STATE-PARKING\n");
-        while (exp_count > 1'b0) begin
+        $fdisplay(logs, "Check-6: Count from 15 -> 10 car exits using 6-STATE-PARKING\n");
+        while (exp_count > 1'b1010) begin
             six_state_parking(6'b011100, 6'b001110);
         end
         count_check_func();  
 
-        $fdisplay(logs, "Check-6: Count from 10 -> 5 car exits using 5-STATE-PARKING\n");
-        while (exp_count > 3'b101) begin
+        $fdisplay(logs, "Check-7: Count from 10 -> 0 car exits using 5-STATE-PARKING\n");
+        while (exp_count > 1'b0) begin
             five_state_parking(5'b01100, 5'b00110);
         end
         count_check_func();   
@@ -105,9 +109,8 @@ module Stim_Generator #(parameter T=2, D=4)(
             A = a[2]; B = b[2]; #D;
             A = a[3]; B = b[3]; #D;
             A = a[4]; B = b[4];
-
-            #(D/2); // Syncing stimulus with Parking DUT
-
+            #(D/2);
+            
             if (a==5'b00110 && b==5'b01100) begin // Parking Entry Sequence
                 if (exp_count < 4'b1111) begin exp_count = exp_count + 1; end //Increment Count
                 else begin exp_count = exp_count; end
@@ -132,9 +135,7 @@ module Stim_Generator #(parameter T=2, D=4)(
             A = a[3]; B = b[3]; #D;
             A = a[4]; B = b[4]; #D;
             A = a[5]; B = b[5];       
-                 
-            #(D/2); // Syncing stimulus with Parking DUT
-
+            #(D/2);     
             if ((a == 6'b000110 && b == 6'b011100) || (a == 6'b001110 && b == 6'b011100) || (a == 6'b001110 && b == 6'b011000)) begin // Parking Entry Sequence
                 if (exp_count < 4'b1111) begin exp_count = exp_count + 1; end //Increment Count
                 else begin exp_count = exp_count; end

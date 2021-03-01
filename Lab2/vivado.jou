@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Mar  1 20:17:41 2021
+# Process ID: 14956
+# Current directory: C:/Users/hp/Desktop/Integrated Systems Design/Lab2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16000 C:\Users\hp\Desktop\Integrated Systems Design\Lab2\Lab2.xpr
+# Log file: C:/Users/hp/Desktop/Integrated Systems Design/Lab2/vivado.log
+# Journal file: C:/Users/hp/Desktop/Integrated Systems Design/Lab2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Lab2.xpr}
+update_compile_order -fileset sources_1

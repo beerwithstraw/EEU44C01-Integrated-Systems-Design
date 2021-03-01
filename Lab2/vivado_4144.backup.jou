@@ -1,0 +1,63 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Mar  1 18:09:36 2021
+# Process ID: 4144
+# Current directory: C:/Users/hp/Desktop/Integrated Systems Design/Lab2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13080 C:\Users\hp\Desktop\Integrated Systems Design\Lab2\Lab2.xpr
+# Log file: C:/Users/hp/Desktop/Integrated Systems Design/Lab2/vivado.log
+# Journal file: C:/Users/hp/Desktop/Integrated Systems Design/Lab2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Lab2.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+source Testbench_TOP.tcl
+save_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+save_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+save_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+source Testbench_TOP.tcl
+save_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+save_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+save_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+source Testbench_TOP.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+source Testbench_TOP.tcl
+save_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Lab2/Testbench_TOP_behav.wcfg}
+close_sim

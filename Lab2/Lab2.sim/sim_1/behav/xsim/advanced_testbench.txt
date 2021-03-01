@@ -8,58 +8,68 @@ Observed Count:  0
  Expected Count:  0
 
 
-Check-2: Count from 0 -> 5 car entries using 5-STATE-PARKING
-
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
-5-State Parking
+6-State-Parking
 Check No.           2 ---- 
 PASSED
 
-Observed Count: 15
- Expected Count: 15
+Observed Count:  0
+ Expected Count:  0
 
 
-Check-3: Count from 6 -> 15 car entries using 6-STATE-PARKING
+Check-2: Count from 0 -> 5 car entries using 6-STATE-PARKING
 
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
+6-State-Parking
 Check No.           3 ---- 
+PASSED
+
+Observed Count:  5
+ Expected Count:  5
+
+
+Check-3: Count from 5 -> 15 car entries using 5-STATE-PARKING
+
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+5-State Parking
+Check No.           4 ---- 
 PASSED
 
 Observed Count: 15
  Expected Count: 15
 
 
-Check-4: Count for more than 15 car entries
+Check-4: Count for more than 15 car entries 5-State-Parking
 
 5-State Parking
-Check No.           4 ---- 
+Check No.           5 ---- 
 FAILED
 
 Observed Count: 14
  Expected Count: 15
 
 
+Check-5: Count for more than 15 car entries 6-State-Parking
+
 6-State-Parking
-Check No.           5 ---- 
+Check No.           6 ---- 
 PASSED
 
 Observed Count: 15
  Expected Count: 15
 
 
-Check-5: Count from 15 -> 10 car exits using 6-STATE-PARKING
+Check-6: Count from 15 -> 10 car exits using 6-STATE-PARKING
 
 6-State-Parking
 6-State-Parking
@@ -76,25 +86,10 @@ Check-5: Count from 15 -> 10 car exits using 6-STATE-PARKING
 6-State-Parking
 6-State-Parking
 6-State-Parking
-Check No.           6 ---- 
-FAILED
-
-Observed Count: 15
- Expected Count:  0
-
-
-Check-6: Count from 10 -> 5 car exits using 5-STATE-PARKING
-
 Check No.           7 ---- 
 FAILED
 
 Observed Count: 15
  Expected Count:  0
 
-
-Total Checks conducted:           7
-
-Total Checks passed:           4
-
-Total Checks failed:           3
 
