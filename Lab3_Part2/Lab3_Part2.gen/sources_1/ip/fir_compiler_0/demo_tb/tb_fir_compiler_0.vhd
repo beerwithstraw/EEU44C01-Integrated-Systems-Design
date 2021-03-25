@@ -96,7 +96,7 @@ architecture tb of tb_fir_compiler_0 is
 
   -- Data master channel signals
   signal m_axis_data_tvalid              : std_logic := '0';  -- payload is valid
-  signal m_axis_data_tdata               : std_logic_vector(55 downto 0) := (others => '0');  -- data payload
+  signal m_axis_data_tdata               : std_logic_vector(15 downto 0) := (others => '0');  -- data payload
 
   -----------------------------------------------------------------------
   -- Aliases for AXI channel TDATA and TUSER fields
@@ -109,7 +109,7 @@ architecture tb of tb_fir_compiler_0 is
   signal s_axis_data_tdata_data        : std_logic_vector(15 downto 0) := (others => '0');
 
   -- Data master channel alias signals
-  signal m_axis_data_tdata_data        : std_logic_vector(48 downto 0) := (others => '0');
+  signal m_axis_data_tdata_data        : std_logic_vector(15 downto 0) := (others => '0');
 
 
 begin
@@ -180,7 +180,7 @@ begin
 
     -- Procedure to drive an impulse and let the impulse response emerge on the data master channel
     -- samples is the number of input samples to drive; default is enough for impulse response output to emerge
-    procedure drive_impulse ( samples : natural := 67 ) is
+    procedure drive_impulse ( samples : natural := 41 ) is
       variable impulse : std_logic_vector(15 downto 0);
     begin
       impulse := (others => '0');  -- initialize unused bits to zero
@@ -204,7 +204,7 @@ begin
     drive_impulse(2);  -- start of impulse; data is now zero
     s_axis_data_tvalid <= '0';
     wait for CLOCK_PERIOD * 5;  -- provide no data for 5 input samples worth
-    drive_zeros(65);  -- back to normal operation
+    drive_zeros(39);  -- back to normal operation
 
     -- End of test
     report "Not a real failure. Simulation finished successfully. Test completed successfully" severity failure;
@@ -250,6 +250,6 @@ begin
   s_axis_data_tdata_data        <= s_axis_data_tdata(15 downto 0);
 
   -- Data master channel alias signals: update these only when they are valid
-  m_axis_data_tdata_data        <= m_axis_data_tdata(48 downto 0) when m_axis_data_tvalid = '1';
+  m_axis_data_tdata_data        <= m_axis_data_tdata(15 downto 0) when m_axis_data_tvalid = '1';
 
 end tb;
