@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Apr 30 00:20:28 2021
+# Process ID: 5052
+# Current directory: C:/Users/hp/Desktop/Integrated Systems Design/Hex_Calculator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17804 C:\Users\hp\Desktop\Integrated Systems Design\Hex_Calculator\Hex_Calculator.xpr
+# Log file: C:/Users/hp/Desktop/Integrated Systems Design/Hex_Calculator/vivado.log
+# Journal file: C:/Users/hp/Desktop/Integrated Systems Design/Hex_Calculator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/hp/Desktop/Integrated Systems Design/Hex_Calculator/Hex_Calculator.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source Testbench.tcl
+save_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Hex_Calculator/Testbench_behav.wcfg}
+add_files -fileset sim_1 -norecurse {{C:/Users/hp/Desktop/Integrated Systems Design/Hex_Calculator/Testbench_behav.wcfg}}
+set_property xsim.view {{C:/Users/hp/Desktop/Integrated Systems Design/Hex_Calculator/Testbench_behav.wcfg}} [get_filesets sim_1]
+save_wave_config {C:/Users/hp/Desktop/Integrated Systems Design/Hex_Calculator/Testbench_behav.wcfg}
+close_sim
